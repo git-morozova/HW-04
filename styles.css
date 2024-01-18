@@ -1,0 +1,307 @@
+/* css reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html{height:100%}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+/* /css reset */
+
+
+
+
+html {
+  height: 100%;
+}
+
+body {
+  margin:0;
+  padding:0;
+  font-family: Mont,sans-serif;
+  background: linear-gradient(#003206, #15681f);
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;  
+  padding-inline-start: 0;
+}
+
+.back {
+  text-align:center;
+  max-width:160px;
+  margin-left: auto;
+}
+
+/* подключаем шрифты */ 
+@font-face {
+  font-family: 'Mont';
+  src: url('fonts/mont/Mont-Black.eot');
+  src: local('Mont Black'), local('Mont-Black'),
+      url('fonts/mont/Mont-Black.eot?#iefix') format('embedded-opentype'),
+      url('fonts/mont/Mont-Black.woff2') format('woff2'),
+      url('fonts/mont/Mont-Black.woff') format('woff'),
+      url('fonts/mont/Mont-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mont';
+  src: url('fonts/mont/Mont-Bold.eot');
+  src: local('Mont Bold'), local('Mont-Bold'),
+      url('fonts/mont/Mont-Bold.eot?#iefix') format('embedded-opentype'),
+      url('fonts/mont/Mont-Bold.woff2') format('woff2'),
+      url('fonts/mont/Mont-Bold.woff') format('woff'),
+      url('fonts/mont/Mont-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mont';
+  src: url('fonts/mont/Mont-Regular.eot');
+  src: local('Mont Regular'), local('Mont-Regular'),
+      url('fonts/mont/Mont-Regular.eot?#iefix') format('embedded-opentype'),
+      url('fonts/mont/Mont-Regular.woff2') format('woff2'),
+      url('fonts/mont/Mont-Regular.woff') format('woff'),
+      url('fonts/mont/Mont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* /подключаем шрифты */
+
+
+/* частично взято из свободно распространяемого шаблона в гугле 
+https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda
+ */
+.main-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.main-box h1 {
+  margin: 0 0 30px;
+  padding: 0 0 20px 0px;
+  color: #b5e916;
+  text-align: left;
+  font-size: 2em;
+  border-bottom: 1px #b5e916 dotted;
+}
+
+.main-box .navigation {
+  position: relative;
+}
+
+.main-box a {
+  position: relative;
+  width: calc(100% - 40px);
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  color: #b5e916;
+  font-size: 16px;
+  text-decoration: none;  
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.main-box a b {  
+  color: #fff;  
+}
+
+.main-box a:hover {
+  background: #b5e916;
+  color: #15681f;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #b5e916,
+              0 0 25px #b5e916,
+              0 0 50px #b5e916,
+              0 0 0px #b5e916;
+}
+
+.main-box a span {
+  position: absolute;
+  display: block;
+}
+
+.main-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #b5e916);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.main-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #b5e916);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.main-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #b5e916);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.main-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #b5e916);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+/* /частично взято из свободно распространяемого шаблона в гугле 
+https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda
+ */
+
+/* стили для вложенных страниц 1-5 */
+.main-box > p {
+  margin:50px 0 15px 0;
+  color: #fff;
+}
+
+#consoleLog, #alert, #prompt {
+  color: #b5e916;
+}
+
+#change-link {  
+  margin:0;
+  padding: 0;
+  background: none;
+  border-bottom:1px dotted #b5e916;
+  border-radius: 0;
+  color: #fff;
+  width: auto;
+}
+
+#change-link:hover{  
+  color: #b5e916;
+  border-bottom:1px dotted #fff;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+#duplicateField {  
+  color: #b5e916;
+  margin-top:0px;
+}
+
+hr {
+background-color: #b5e916;
+height: 0.5px;
+border:0;
+}
+
+input {
+  border: 0;
+  background-color: #b5e916;
+  color: #353535;
+  margin-top: 20px;
+  width: calc(100% - 30px);
+  border-radius: 5px;
+  padding: 10px 15px;  
+}
+
+/* /стили для вложенных страниц 1-5 */
